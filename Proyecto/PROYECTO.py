@@ -32,7 +32,10 @@ def calcular_ganancias_costos(info_linea):
     costo_total = sum(horas * costo_hora for horas, costo_hora in empleados)
     ganancia_neta = ganancia_total - costo_total
     indice_eficiencia = ganancia_neta / len(empleados)
-    print(f'---Resultados línea---')
+    if info_linea == info_linea1:
+        print(f'---Resultados línea 1 ---')
+    else:
+        print(f'---Resultados línea 2---')
     print(f'Ganancia total: '+str(ganancia_total))
     print(f'Costo total: '+str(costo_total))
     print(f'Ganancia neta: '+str(ganancia_neta))
